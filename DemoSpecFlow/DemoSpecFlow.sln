@@ -3,7 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoSpecFlow", "DemoSpecFlow\DemoSpecFlow.csproj", "{A631E0FD-3370-488D-89A6-0AD0ADD45E03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoSpecFlow", "DemoSpecFlow\DemoSpecFlow.csproj", "{A631E0FD-3370-488D-89A6-0AD0ADD45E03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoSpecFlow.Test", "DemoSpecFlow.Test\DemoSpecFlow.Test.csproj", "{F1269DA4-8987-4576-AD24-CE8020E9E079}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{ACDE4278-2E43-4226-AB5C-62D733DE45CC}"
+	ProjectSection(SolutionItems) = preProject
+		..\Doc\2-Test_Tipos .md = ..\Doc\2-Test_Tipos .md
+		..\Doc\1-Test_presentacion.md = ..\Doc\1-Test_presentacion.md
+		..\Doc\3-Test_metodologias.md = ..\Doc\3-Test_metodologias.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +24,10 @@ Global
 		{A631E0FD-3370-488D-89A6-0AD0ADD45E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A631E0FD-3370-488D-89A6-0AD0ADD45E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A631E0FD-3370-488D-89A6-0AD0ADD45E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1269DA4-8987-4576-AD24-CE8020E9E079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1269DA4-8987-4576-AD24-CE8020E9E079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1269DA4-8987-4576-AD24-CE8020E9E079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1269DA4-8987-4576-AD24-CE8020E9E079}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
