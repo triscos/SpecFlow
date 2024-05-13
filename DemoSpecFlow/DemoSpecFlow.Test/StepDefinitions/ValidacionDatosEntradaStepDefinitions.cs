@@ -11,7 +11,7 @@ namespace DemoSpecFlow.Test.StepDefinitions
         public void GivenDadoUnLibroConLosDatosDeEntrada(Table table)
         {
            var libro = table.CreateInstance<Libro>();
-            libro.
+            //libro.
         }
 
         [When(@"Valido los datos de entrada")]
