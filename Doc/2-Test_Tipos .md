@@ -1,7 +1,12 @@
-### TEST DESARROLLO DE SOFTWARE
+### PRUEBAS DE SOFTWARE
 
 
 #### 1. TIPOS TEST AUTOMATIZADOS
+
+<img src="./Images/tipos_test
+.png"
+     alt="ciclo de vida TDD"
+     style="width:65%; heigth=65%" />
 
 ##### 1.1. TEST UNITARIOS: 
 
@@ -25,7 +30,8 @@ public void TestCalcularTotalFactura()
 }
 ```
 
-##### 1.1. TEST DE INTEGRACIÓN:
+
+##### 1.2. TEST DE INTEGRACIÓN:
 
 Se comprueba cómo diferentes partes o módulos de un sistema trabajan juntos.
 
@@ -47,7 +53,8 @@ public void TestAutenticacion()
 
 ```
 
-##### 1.1. TEST END2END:
+
+##### 1.2. TEST END2END:
 
 Se comprueba que un flujo de trabajo completo funcione como se espera, de princio a fin.
 
@@ -58,3 +65,12 @@ Se comprueba que un flujo de trabajo completo funcione como se espera, de princi
     * Añadirlo al carrito, proceder al pago
     * Introducir detalles de pago 
     * Finalmente confirmar la compra.
+
+
+##### 1.3. ESFUERZO:
+
+El esfuerzo de automatización se refiere a la cantidad de tiempo y recursos necesarios para crear y mantener pruebas automatizadas.
+<img src="./Images/piramide_test.png"
+     alt="ciclo de vida TDD"
+     style="width:35%; heigth=3
+     5%" />

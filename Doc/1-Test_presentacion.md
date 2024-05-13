@@ -1,4 +1,8 @@
-### TEST DE DESARROLLO DE SOFTWARE
+### PRUEBAS DE SOFTWARE
+
+<img src="./Images/grupos_test.png"
+     alt="ciclo de vida TDD"
+     style="width:65%; heigth=65%" />
 
 
 #### 1. TEST MANUALES

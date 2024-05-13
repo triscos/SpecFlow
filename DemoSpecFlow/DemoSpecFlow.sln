@@ -9,10 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoSpecFlow.Test", "DemoSp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{ACDE4278-2E43-4226-AB5C-62D733DE45CC}"
 	ProjectSection(SolutionItems) = preProject
-		..\Doc\2-Test_Tipos .md = ..\Doc\2-Test_Tipos .md
 		..\Doc\1-Test_presentacion.md = ..\Doc\1-Test_presentacion.md
+		..\Doc\2-Test_Tipos .md = ..\Doc\2-Test_Tipos .md
 		..\Doc\3-Test_metodologias.md = ..\Doc\3-Test_metodologias.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{6BD9F2E0-D20A-43B8-A0F3-7037F873C562}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6BD9F2E0-D20A-43B8-A0F3-7037F873C562} = {ACDE4278-2E43-4226-AB5C-62D733DE45CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D3977F75-6BA0-45AD-BD6C-6C9FAC993F8B}
