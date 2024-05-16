@@ -1,14 +1,16 @@
-### PRUEBAS DE SOFTWARE
+# PRUEBAS DE SOFTWARES
 
+## 2. TIPOS DE PRUEBAS DE SOFTWARE
 
-#### 1. TIPOS TEST AUTOMATIZADOS
+Las pruebas de software se pueden clasificar en diferentes tipos, según el nivel de prueba, el tipo de prueba y el esfuerzo de automatización.
+
 
 <img src="./Images/tipos_test
 .png"
      alt="ciclo de vida TDD"
      style="width:65%; heigth=65%" />
 
-##### 1.1. TEST UNITARIOS: 
+### 2.1 TEST UNITARIOS: 
 
 Se prueban las unidades de código más pequeñas posibles, como funciones o métodos.
 
@@ -31,7 +33,7 @@ public void TestCalcularTotalFactura()
 ```
 
 
-##### 1.2. TEST DE INTEGRACIÓN:
+### 2.2 TEST DE INTEGRACIÓN:
 
 Se comprueba cómo diferentes partes o módulos de un sistema trabajan juntos.
 
@@ -54,7 +56,7 @@ public void TestAutenticacion()
 ```
 
 
-##### 1.2. TEST END2END:
+### 2.3 TEST END2END:
 
 Se comprueba que un flujo de trabajo completo funcione como se espera, de princio a fin.
 
@@ -67,9 +69,11 @@ Se comprueba que un flujo de trabajo completo funcione como se espera, de princi
     * Finalmente confirmar la compra.
 
 
-##### 1.3. ESFUERZO:
+###  ESFUERZO:
 
 El esfuerzo de automatización se refiere a la cantidad de tiempo y recursos necesarios para crear y mantener pruebas automatizadas.
+
+
 <img src="./Images/piramide_test.png"
      alt="ciclo de vida TDD"
      style="width:35%; heigth=3

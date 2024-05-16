@@ -10,8 +10,11 @@
 
         private string rutaArchivo { get; set; }
 
-        public Biblioteca() : this("biblioteca.txt")
+        public Biblioteca() 
         {
+            rutaArchivo = "biblioteca.txt";
+            libros = new List<Libro>();
+            CargarDatos();
         }
 
         public Biblioteca(string rutaArchivo)
@@ -76,6 +79,11 @@
         {
             var lineas = libros.Select(l => $"{l.Titulo},{l.Autor},{l.ISBN}");
             File.WriteAllLines(rutaArchivo, lineas);
+        }
+
+        public void EliminarBiblioteca()
+        {
+            File.Delete(rutaArchivo);
         }
     }
 

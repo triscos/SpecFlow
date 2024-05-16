@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace DemoSpecFlow.Test.Features
+namespace SpecFlowTest.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -19,19 +19,21 @@ namespace DemoSpecFlow.Test.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class CRUDLIBROSFeature : object, Xunit.IClassFixture<CRUDLIBROSFeature.FixtureData>, System.IDisposable
+    [Xunit.TraitAttribute("Category", "GestionarBiblioteca")]
+    public partial class GestionarBibliotecaFeature : object, Xunit.IClassFixture<GestionarBibliotecaFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private string[] _featureTags = ((string[])(null));
+        private string[] _featureTags = new string[] {
+                "GestionarBiblioteca"};
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "Calculator.feature"
+#line 1 "GestionarBiblioteca.feature"
 #line hidden
         
-        public CRUDLIBROSFeature(CRUDLIBROSFeature.FixtureData fixtureData, DemoSpecFlow_Test_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public GestionarBibliotecaFeature(GestionarBibliotecaFeature.FixtureData fixtureData, SpecFlowTest_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +42,9 @@ namespace DemoSpecFlow.Test.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CRUD LIBROS", "Insertar, borrar, listar y eliminar un libro", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Gestionar Biblioteca", "\tComo un usuario de la aplicación\r\n    Quiero poder crear, leer, actualizar y eli" +
+                    "minar libros\r\n    Para que pueda gestionar mi biblioteca de libros", ProgrammingLanguage.CSharp, new string[] {
+                        "GestionarBiblioteca"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,17 +84,17 @@ namespace DemoSpecFlow.Test.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Añado un nuevo libro a la biblioteca")]
-        [Xunit.TraitAttribute("FeatureTitle", "CRUD LIBROS")]
-        [Xunit.TraitAttribute("Description", "Añado un nuevo libro a la biblioteca")]
-        [Xunit.TraitAttribute("Category", "mytag")]
-        public virtual void AnadoUnNuevoLibroALaBiblioteca()
+        [Xunit.SkippableFactAttribute(DisplayName="Crear y leer un libro")]
+        [Xunit.TraitAttribute("FeatureTitle", "Gestionar Biblioteca")]
+        [Xunit.TraitAttribute("Description", "Crear y leer un libro")]
+        [Xunit.TraitAttribute("Category", "tag1")]
+        public virtual void CrearYLeerUnLibro()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "tag1"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Añado un nuevo libro a la biblioteca", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 5
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Crear y leer un libro", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -110,29 +114,36 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
- testRunner.Given("El libro con el siguiente titulo \"El principito\", autor \"Antoine de Saint-Exupéry" +
-                        "\" y isbn \"1943\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Titulo",
+                            "Autor",
+                            "ISBN"});
+                table1.AddRow(new string[] {
+                            "El hereje",
+                            "Delibes",
+                            "456"});
+#line 10
+ testRunner.Given("que el usuario ha introducido los detalles del libro", ((string)(null)), table1, "Given ");
 #line hidden
-#line 7
- testRunner.When("Inserto el libro a la biblioteca", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+ testRunner.When("el usuario pulsa el boton de guardar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 8
- testRunner.Then("El libro con el titulo \"1943\" debería ser añadido correctamente", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 14
+ testRunner.Then("los detalles del libro con isbn \"456\"  se muestran en pantalla", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Modifico un nuevo libro a la biblioteca")]
-        [Xunit.TraitAttribute("FeatureTitle", "CRUD LIBROS")]
-        [Xunit.TraitAttribute("Description", "Modifico un nuevo libro a la biblioteca")]
-        public virtual void ModificoUnNuevoLibroALaBiblioteca()
+        [Xunit.SkippableFactAttribute(DisplayName="Crear y eliminar un libro")]
+        [Xunit.TraitAttribute("FeatureTitle", "Gestionar Biblioteca")]
+        [Xunit.TraitAttribute("Description", "Crear y eliminar un libro")]
+        public virtual void CrearYEliminarUnLibro()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Modifico un nuevo libro a la biblioteca", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 10
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Crear y eliminar un libro", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 16
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -152,14 +163,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 11
- testRunner.Given("El libro con el siguiente con el isbn \"1943\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Titulo",
+                            "Autor",
+                            "ISBN"});
+                table2.AddRow(new string[] {
+                            "El camino",
+                            "Delibes",
+                            "123"});
+#line 17
+ testRunner.Given("que el usuario ha introducido los detalles del libro", ((string)(null)), table2, "Given ");
 #line hidden
-#line 12
- testRunner.When("Modifico el autor del libro a \"A. Saint-Exupéry\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 20
+ testRunner.When("el usuario pulsa el boton de guardar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 13
- testRunner.Then("El libro con el autor \"A. Saint-Exupéry\" debería ser modificado correctamente", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 21
+ testRunner.And("el usuario pulsa el boton de eliminar el libro con isbn \"123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 22
+ testRunner.Then("el libro con isbn \"123\" no se muestra en pantalla", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -172,12 +194,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                CRUDLIBROSFeature.FeatureSetup();
+                GestionarBibliotecaFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                CRUDLIBROSFeature.FeatureTearDown();
+                GestionarBibliotecaFeature.FeatureTearDown();
             }
         }
     }
